@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataScienceAssignment02_Forecasting.Utils;
+using DataScienceAssignment02_Forecasting.Smoothing;
 
 namespace DataScienceAssignment02_Forecasting
 {
@@ -22,12 +23,16 @@ namespace DataScienceAssignment02_Forecasting
         {
             //Read SwordsDemand.csv containing 36 rows
             var data = Parser.Parse("SwordsDemand.csv", ',');
-            Console.WriteLine("cool");
+            var ses = new SES(data, 12);
+            var des = new DES(data, 12);
 
-            for (var i = 0; i < data.Count; i++)
-            {
-                Smoothing.Series["Data"].Points.AddXY(i + 1, data[i]);
-            }
+            AddToChart(data, "Data");
+        }
+
+        private void AddToChart(List<double> dataset, string serie)
+        {
+            for (var i = 0; i < dataset.Count; i++)
+                Smoothing.Series[serie].Points.AddXY(i + 1, dataset[i]);
         }
     }
 }

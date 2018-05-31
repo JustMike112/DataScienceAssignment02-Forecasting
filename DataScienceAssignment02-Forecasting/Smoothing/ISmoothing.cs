@@ -8,5 +8,6 @@ namespace DataScienceAssignment02_Forecasting.Smoothing
 {
     interface ISmoothing
     {
+        List<double> Calculate();
     }
 }
