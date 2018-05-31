@@ -28,14 +28,19 @@ namespace DataScienceAssignment02_Forecasting
 
             AddToChart(data, "Data");
             AddToChart(ses.Calculate(), "SES");
+            AddToChart(des.Calculate(), "DES");
 
             var bestSES = ses.GetBestValues();
-            var bestDES = ses.GetBestValues();
+            var bestDES = des.GetBestValues();
 
             // Write the best values in the textbox
             textBox1.AppendText("Forecasting Assignment" + Environment.NewLine + Environment.NewLine);
             textBox1.AppendText("Best Alpha for SES: " + bestSES.Item1 + Environment.NewLine);
             textBox1.AppendText("Best Error for SES: " + bestSES.Item2 + Environment.NewLine + Environment.NewLine);
+            textBox1.AppendText("Best Alpha for SES: " + bestDES.Item1 + Environment.NewLine);
+            textBox1.AppendText("Best Beta for SES: " + bestDES.Item2 + Environment.NewLine);
+            textBox1.AppendText("Best Error for SES: " + bestDES.Item3 + Environment.NewLine);
+
         }
 
         private void AddToChart(List<double> dataset, string serie)
