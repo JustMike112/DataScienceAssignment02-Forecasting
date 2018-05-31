@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.Smoothing = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Smoothing)).BeginInit();
@@ -41,57 +41,62 @@
             // 
             // Smoothing
             // 
-            chartArea2.AxisX.Title = "Months";
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            chartArea2.AxisY.Title = "Demand";
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.Name = "ChartArea1";
-            this.Smoothing.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.Smoothing.Legends.Add(legend2);
+            chartArea1.AxisX.Title = "Months";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            chartArea1.AxisY.Title = "Demand";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.Smoothing.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.Smoothing.Legends.Add(legend1);
             this.Smoothing.Location = new System.Drawing.Point(314, 12);
             this.Smoothing.Name = "Smoothing";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series4.Name = "Data";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Legend = "Legend1";
-            series5.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series5.Name = "SES";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Legend = "Legend1";
-            series6.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series6.Name = "DES";
-            this.Smoothing.Series.Add(series4);
-            this.Smoothing.Series.Add(series5);
-            this.Smoothing.Series.Add(series6);
-            this.Smoothing.Size = new System.Drawing.Size(889, 518);
+            this.Smoothing.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.Smoothing.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Black,
+        System.Drawing.Color.Red,
+        System.Drawing.Color.Blue};
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series1.Name = "Data";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series2.Name = "SES";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series3.Name = "DES";
+            this.Smoothing.Series.Add(series1);
+            this.Smoothing.Series.Add(series2);
+            this.Smoothing.Series.Add(series3);
+            this.Smoothing.Size = new System.Drawing.Size(998, 672);
             this.Smoothing.TabIndex = 0;
             this.Smoothing.Text = "Smoothing";
-            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Sword Demand Forecasting";
-            title2.Text = "Sword Demand Forecasting";
-            this.Smoothing.Titles.Add(title2);
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Sword Demand Forecasting";
+            title1.Text = "Sword Demand Forecasting";
+            this.Smoothing.Titles.Add(title1);
             // 
             // textBox1
             // 
-            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBox1.Location = new System.Drawing.Point(13, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(295, 518);
+            this.textBox1.Size = new System.Drawing.Size(295, 672);
             this.textBox1.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 542);
+            this.ClientSize = new System.Drawing.Size(1324, 696);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Smoothing);
             this.Name = "Form1";
