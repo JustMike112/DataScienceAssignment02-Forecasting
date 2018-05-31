@@ -47,9 +47,8 @@ namespace DataScienceAssignment02_Forecasting.Smoothing
             // Create a list containing the alphas and errors
             var alphaError = new List<Tuple<double, double>>();
 
-            for (var a = 0.0; a < 1.0; a += 0.1)
+            for (var alpha = 0.0; alpha < 1.0; alpha += 0.01)
             {
-                var alpha = a;
                 var SSE = 0.0;
                 var smoothedPoints = new List<double> { dataset[0] };
 
@@ -62,7 +61,7 @@ namespace DataScienceAssignment02_Forecasting.Smoothing
                 }
 
                 SSE = Math.Sqrt(SSE / (dataset.Count - 1));
-                alphaError.Add(new Tuple<double, double>(a, SSE));
+                alphaError.Add(new Tuple<double, double>(alpha, SSE));
             }
 
             // Get the alpha where the error is lowest
